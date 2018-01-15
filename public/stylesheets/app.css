@@ -1,0 +1,40 @@
+i.icon{
+    font-size: 2.0em;
+}
+
+.container.main{
+    padding-top: 7.0em;
+    font-family: Comfortaa;
+    padding-bottom: 5.0em;
+}
+
+#search{
+    display: inline;
+    margin-left: 50px;
+}
+
+.aakash{
+    background: url("https://cdn.wallpapersafari.com/29/44/linm7I.jpg") no-repeat fixed;
+    background-size: cover;
+}
+
+.star-imdb{
+    font-size: 0.75em;
+    color: #FFAB00;
+    /*padding-left: 3.2em;*/
+}
+
+.out10{
+    color:#BDBDBD;
+    font-size: 0.65em;
+}
+
+.imdbRating{
+    color:#212121;
+    font-size: 1.25em;
+}
+
+.movie-content{
+    font-size: 1.2em;
+    font-weight: 700;
+}

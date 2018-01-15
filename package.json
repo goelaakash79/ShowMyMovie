@@ -1,0 +1,16 @@
+{
+  "name": "show_my_movie",
+  "version": "1.0.0",
+  "description": "Simple movie Desciption site",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aakash Goel",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "request": "^2.83.0"
+  }
+}

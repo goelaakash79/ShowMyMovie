@@ -1,0 +1,19 @@
+<% include partials/header %>
+<div class="aakash">
+<div class="ui main text container">
+    <div class="ui huge header" style="color:white;">Search Your Movie here!</div>
+    <div class="ui top attached segment">
+        <form action="/movies/results" method="GET">
+            <div class="ui category search">
+                <div class="ui icon input">
+                    <input class="prompt" type="text" name="movie" placeholder="Search Movie">
+                    <i class="search icon"></i>
+                </div>
+                <div class="results"></div>
+                <button id="search" class="ui olive basic button">Search</button>
+            </div>
+        </form>    
+    </div>
+</div>
+</div>
+<% include partials/footer %>
