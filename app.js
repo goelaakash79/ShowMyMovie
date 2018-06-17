@@ -6,12 +6,12 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 app.get("/", function(req, res) {
-    res.render("index");    
+    res.render("index");
 });
 
 // INDEX
 app.get("/movies", function(req, res){
-    res.render("index");    
+    res.render("index");
 });
 
 // SEARCH
@@ -22,7 +22,7 @@ app.get("/movies/results", function(req, res) {
         if(!err && response.statusCode == 200){
             var data = JSON.parse(body);
             res.render("results", {data: data});
-        }    
+        }
     });
 });
 
@@ -37,9 +37,13 @@ app.get("/movies/show/:id", function(req, res) {
             console.log(data["Title"]);
             res.render("show", {data: data});
         }
-    });   
+    });
+});
+
+app.get("*", function(req, res){
+    res.render("404page");
 });
 
 app.listen("1234", process.env.IP, function(){
-    console.log("Server is running");    
+    console.log("Server is running");
 });

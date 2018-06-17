@@ -1,3 +1,7 @@
+*{
+  font-family: Comfortaa;
+}
+
 i.icon{
     font-size: 2.0em;
 }
@@ -14,8 +18,9 @@ i.icon{
 }
 
 .aakash{
-    background: url("https://cdn.wallpapersafari.com/29/44/linm7I.jpg") no-repeat fixed;
+    background: url("/images/xyz.png") no-repeat fixed;
     background-size: cover;
+    /* height: 100%; */
 }
 
 .star-imdb{
