@@ -4,7 +4,7 @@
   "description": "Simple movie Desciption site",
   "main": "app.js",
   "scripts": {
-    "start": "npm start"
+    "start": "node app.js"
   },
   "author": "Aakash Goel",
   "license": "ISC",
