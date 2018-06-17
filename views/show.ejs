@@ -1,46 +1,50 @@
 <% include partials/header %>
-
-<div class="ui main text container" style="font-family:Comfortaa;">
-    <div class="ui inverted segment">
-        <div class="ui huge grey inverted header" style="font-size:3em;"><%= data.Title %></div>
-    </div>
-    <div class="ui huge right aligned header">
+  <div class="aakash">
+    <div class="ui main text container" style="font-family:Comfortaa;">
+      <div class="ui segment">
+        <div class="ui huge gray header" style="font-family:Comfortaa; font-size:3em;">
+          <%= data.Title %>
+        </div>
+      </div>
+      <div class="ui huge right aligned header">
         <span class="star-imdb"><i class="star half empty icon"></i>
-            <span class="imdbRating">
+            <span class="imdbRating1">
                 <%=data.imdbRating%>
                 <span class="out10">/10<i class="imdb icon" style="color:#749CC7;"></i></span>
-            </span>
         </span>
-    </div>
-    <!--<div class="ui right aligned">-->
-    <!--    <%=data.imdbVotes%>-->
-    <!--</div>-->
-    <div class="ui top attached segment">
-    <div class="ui top attached">
-        <div class="ui two column grid">
+        </span>
+      </div>
+      <!--<div class="ui right aligned">-->
+      <!--    <%=data.imdbVotes%>-->
+      <!--</div>-->
+      <div class="ui top attached segment">
+        <div class="ui top attached">
+          <div class="ui two column grid">
             <div class="row">
-                <div class="item column">
-                    <img class="ui rounded image" src="<%= data.Poster %>">
-                </div>  
-                <div class="column movie-content">
-                    <div class="description">
-                        <p><i class="calendar icon" style="font-size:1.4em; color: #1DE9B6;"></i> <b>Date of Release</b> :- <span style="color: #424242;"><%= data.Released %></span></p>
-                        <p><i class="hourglass start icon" style="font-size:1.4em; color: #FFAB40;"></i> <b>Run Time</b> :- <span style="color: #424242;"><%= data.Runtime %></span></p>
-                        <p><b>Genre</b> :- <span style="color: #424242;"><%= data.Genre %></span></p>  
-                        <p><b>Box Office Collection</b> :- <span style="color: #424242;"><%= data.BoxOffice %></span></p>
-                        <hr>
-                        <span><i class="tag icon" style="color: #FF8A80;"></i>Plot<span>
+              <div class="item column">
+                <img class="ui rounded image" src="<%= data.Poster %>">
+              </div>
+              <div class="column movie-content">
+                <div class="description">
+                  <p><i class="calendar icon" style="font-size:1.4em; color: #1DE9B6;"></i> <b>Date of Release</b> :- <span style="color: #424242;"><%= data.Released %></span></p>
+                  <p><i class="hourglass start icon" style="font-size:1.4em; color: #FFAB40;"></i> <b>Run Time</b> :- <span style="color: #424242;"><%= data.Runtime %></span></p>
+                  <p><b>Genre</b> :- <span style="color: #424242;"><%= data.Genre %></span></p>
+                  <p><b>Box Office Collection</b> :- <span style="color: #424242;"><%= data.BoxOffice %></span></p>
+                  <hr>
+                  <span><i class="tag icon" style="color: #FF8A80;"></i>Plot<span>
                             <br>
                             <span><%=data.Plot%></span>
-                        <hr>
-                        <span style="color: #3E2723;"><i class="users icon" style="font-szie: 1em; color:#C51162;"></i>Actors</span>
-                        <p><%= data.Actors%></p>
-                    </div>
-                </div>    
-            </div>    
+                  <hr>
+                  <span style="color: #3E2723;"><i class="users icon" style="font-szie: 1em; color:#C51162;"></i>Actors</span>
+                  <p>
+                    <%= data.Actors%>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>    
+      </div>
     </div>
-</div>    
-
-<% include partials/footer %>
+  </div>
+  <% include partials/footer %>

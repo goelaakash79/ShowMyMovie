@@ -39,6 +39,11 @@ i.icon{
     font-size: 1.25em;
 }
 
+.imdbRating1 {
+  color: #ffffff;
+  font-size: 1.25em;
+}
+
 .movie-content{
     font-size: 1.2em;
     font-weight: 700;
