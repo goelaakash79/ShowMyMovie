@@ -40,6 +40,10 @@ app.get("/movies/show/:id", function(req, res) {
     });
 });
 
+app.get("/recommended", function(req, res) {
+  res.render("recommended");
+});
+
 app.get("*", function(req, res){
     res.render("404page");
 });
