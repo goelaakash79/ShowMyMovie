@@ -31,15 +31,54 @@ app.get("/movies/results", function(req, res) {
 // SHOW
 app.get("/movies/show/:id", function(req, res) {
   var movieId = req.params.id;
-  console.log(movieId);
+  let datalinks;
+  let urldata;
   var url = "http://www.omdbapi.com/?apikey=thewdb&plot=full&i=" + movieId;
+
   request(url, function(err, response, body) {
     if (!err && response.statusCode == 200) {
       var data = JSON.parse(body);
-      console.log(data["Title"]);
-      res.render("show", {
-        data: data
-      });
+
+      var pptMovieUrl = 'https://tv-v2.api-fetch.website/movie/' + movieId;
+      var pptShowUrl = 'https://tv-v2.api-fetch.website/show/' + movieId;
+
+      if (data['Type'] === 'movie') {
+        request(pptMovieUrl, function(err, response, body) {
+          if (!err && response.statusCode == 200) {
+            if (body) {
+              datalinks = JSON.parse(body);
+              urldata = datalinks['torrents']['en'];
+
+              res.render("show", {
+                data: data,
+                urldata: urldata,
+                msg: "movielinksavail"
+              });
+            } else {
+              res.render("show", {
+                data: data,
+                msg: "movielinksnoavail"
+              });
+            }
+          }
+        });
+      } else if (data['Type'] === 'series') {
+        request(pptShowUrl, function(err, response, body) {
+          if (!err && response.statusCode == 200) {
+            if (body) {
+              datalinks = JSON.parse(body);
+              urldata = datalinks['episodes'];
+              console.log(urldata);
+              res.render("show", {
+                data: data,
+                urldata: urldata,
+                msg: "noserieslinks"
+              });
+            }
+            // console.log(datalinks['episodes'][0]['torrents']['720p'].url);
+          }
+        });
+      }
     }
   });
 });

@@ -20,6 +20,32 @@
             <div class="row">
               <div class="item column">
                 <img class="ui rounded image" src="<%= data.Poster %>">
+                <center>
+                  <br>
+                  <hr style="opacity:0.7;">
+                  <br>
+                  <% if(msg=="movielinksavail"){ %>
+                  <button class="ui blue large button">
+                    <i class="download icon" style="font-size:1em; color: white; margin-right:14px;"></i>
+                    <a href="<%= urldata['720p'].url %>" class="" style="color:white; font-family:Comfortaa;">Download Movie in 720p</a>
+                  </button>
+                  <br><br>
+                  <button class="ui green large button">
+                    <i class="download icon" style="font-size:1em; color: white;"></i>
+                    <a href="<%= urldata['1080p'].url %>" class="" style="color:white; font-family:Comfortaa;">Download Movie in 1080p</a>
+                  </button>
+                  <% } else if(msg=="movielinksnoavail"){ %>
+                  <button class="ui blue disabled large button">
+                    <i class="download icon" style="font-size:1em; color: white; margin-right:14px;"></i>
+                    <a href="" class="" style="color:white; font-family:Comfortaa;">No download links</a>
+                  </button>
+                  <% } else if(msg=="noserieslinks"){ %>
+                  <button class="ui blue disabled large button">
+                    <i class="download icon" style="font-size:1em; color: white; margin-right:14px;"></i>
+                    <a href="" class="" style="color:white; font-family:Comfortaa;">No download links</a>
+                  </button>
+                  <% } %>
+                </center>
               </div>
               <div class="column movie-content">
                 <div class="description">
