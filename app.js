@@ -63,20 +63,15 @@ app.get("/movies/show/:id", function(req, res) {
           }
         });
       } else if (data['Type'] === 'series') {
-        request(pptShowUrl, function(err, response, body) {
-          if (!err && response.statusCode == 200) {
-            if (body) {
-              datalinks = JSON.parse(body);
-              urldata = datalinks['episodes'];
-              console.log(urldata);
-              res.render("show", {
-                data: data,
-                urldata: urldata,
-                msg: "noserieslinks"
-              });
-            }
-            // console.log(datalinks['episodes'][0]['torrents']['720p'].url);
-          }
+        // request(pptShowUrl, function(err, response, body) {
+        // if (!err && response.statusCode == 200) {
+        // if (body) {
+        // datalinks = JSON.parse(body);
+        // urldata = datalinks['episodes'];
+        res.render("show", {
+          data: data,
+          // urldata: urldata,
+          msg: "noserieslinks"
         });
       }
     }
