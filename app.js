@@ -63,22 +63,11 @@ app.get("/movies/show/:id", function(req, res) {
           }
         });
       } else if (data['Type'] === 'series') {
-        request(pptShowUrl, function(err, response, body) {
-          if (!err && response.statusCode == 200) {
-            console.log("hi");
-            if(body == null || body == undefined || body == ""){
-              console.log("bye");
-            }
-          }
+        // request(pptShowUrl, function(err, response, body) {}
+        res.render("show", {
+          data: data,
+          msg: "noserieslinks"
         });
-        // if (body) {
-        // datalinks = JSON.parse(body);
-        // urldata = datalinks['episodes'];
-        // res.render("show", {
-        //   data: data,
-        //   // urldata: urldata,
-        //   msg: "noserieslinks"
-        // });
       }
     }
   });
