@@ -12,5 +12,14 @@
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "request": "^2.83.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/starlordadi06/ShowMyMovie.git"
+  },
+  "bugs": {
+    "url": "https://github.com/starlordadi06/ShowMyMovie/issues"
+  },
+  "homepage": "https://github.com/starlordadi06/ShowMyMovie#readme"
 }

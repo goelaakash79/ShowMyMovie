@@ -1,52 +1,63 @@
 * {
   font-family: Comfortaa;
+    font-family: 'Dancing Script', cursive;
 }
 
 .contact-icon i:hover{
   color: #26A69A;
+    font-family: 'Dancing Script', cursive;
 }
 
 i.icon {
   font-size: 2.0em;
+    font-family: 'Dancing Script', cursive;
 }
 
 .container.main {
   padding-top: 7.0em;
   font-family: Comfortaa;
   padding-bottom: 5.0em;
+    font-family: 'Dancing Script', cursive;
 }
 
 #search {
   display: inline;
   margin-left: 50px;
+    font-family: 'Dancing Script', cursive;
 }
 
 .aakash {
   background: url("/images/xyz.png") no-repeat fixed;
   background-size: cover;
+    font-family: 'Dancing Script', cursive;
 }
 
 .star-imdb {
   font-size: 0.75em;
   color: #FFAB00;
+    font-family: 'Dancing Script', cursive;
 }
 
 .out10 {
   color: #BDBDBD;
   font-size: 0.65em;
+    font-family: 'Dancing Script', cursive;
 }
 
 .imdbRating {
   color: #212121;
   font-size: 1.25em;
+    font-family: 'Dancing Script', cursive;
 }
 
 .imdbRating1 {
   color: #ffffff;
   font-size: 1.25em;
+    font-family: 'Dancing Script', cursive;
 }
 
 .movie-content {
   font-size: 1.2em;
   font-weight: 700;
+    font-family: 'Dancing Script', cursive;
 }
