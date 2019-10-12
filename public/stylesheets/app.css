@@ -3,7 +3,7 @@
 }
 
 .contact-icon i:hover{
-  color: #26A69A;
+  color: blue;
 }
 
 i.icon {
@@ -32,7 +32,7 @@ i.icon {
 }
 
 .out10 {
-  color: #BDBDBD;
+  color: red;
   font-size: 0.65em;
 }
 
